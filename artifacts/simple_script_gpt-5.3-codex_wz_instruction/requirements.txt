@@ -1,0 +1,12 @@
+# Fallback for environments where `uv sync` cannot be used.
+# Prefer: `uv venv && uv sync --extra dev`
+jinja2>=3.1.0
+pandas>=2.2.0
+plotly>=5.20.0
+
+# Dev dependencies (optional)
+black>=24.0.0
+mypy>=1.8.0
+pytest>=8.0.0
+pytest-cov>=5.0.0
+

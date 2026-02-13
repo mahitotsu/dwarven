@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "csv-report-tool"
+version = "0.1.0"
+description = "CSV analysis and HTML report generator"
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+  "pandas>=1.5",
+  "matplotlib>=3.0",
+  "jinja2>=3.0"
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=7.0",
+  "pytest-cov>=4.0",
+  "black>=23.0",
+  "mypy>=0.990"
+]

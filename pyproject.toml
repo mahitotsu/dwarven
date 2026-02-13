@@ -1,0 +1,17 @@
+[project]
+name = "dwarven"
+version = "0.1.0"
+description = "GitHub Copilot SDK Application"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "github-copilot-sdk>=0.1.23",
+    "python-dotenv>=1.0.0"
+]
+
+[project.scripts]
+dwarven = "dwarven.main:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"

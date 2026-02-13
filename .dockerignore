@@ -1,0 +1,6 @@
+# Dockerビルド時の一時ファイル
+docker/entrypoint.sh
+docker/socket-server.sh
+
+# Dockerで使用するワークスペース
+workspace/

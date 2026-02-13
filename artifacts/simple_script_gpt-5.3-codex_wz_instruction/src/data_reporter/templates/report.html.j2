@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{{ report.title }}</title>
+    <style>
+      body { font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; margin: 24px; }
+      table { border-collapse: collapse; }
+      th, td { border: 1px solid #ddd; padding: 8px 10px; }
+      th { background: #f7f7f7; text-align: left; }
+      .muted { color: #666; }
+    </style>
+  </head>
+  <body>
+    <h1>{{ report.title }}</h1>
+    <p class="muted">
+      Range: {{ report.stats.start_date }} to {{ report.stats.end_date }} ({{ report.stats.count }} rows)
+    </p>
+
+    <h2>Summary</h2>
+    <table>
+      <tbody>
+        <tr><th>mean</th><td>{{ "%.6g"|format(report.stats.mean) }}</td></tr>
+        <tr><th>median</th><td>{{ "%.6g"|format(report.stats.median) }}</td></tr>
+        <tr><th>min</th><td>{{ "%.6g"|format(report.stats.min) }}</td></tr>
+        <tr><th>max</th><td>{{ "%.6g"|format(report.stats.max) }}</td></tr>
+      </tbody>
+    </table>
+
+    <h2>Plot</h2>
+    {{ report.plot_html | safe }}
+  </body>
+</html>
+
